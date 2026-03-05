@@ -1,0 +1,12 @@
+{
+  "name": "metals",
+  "version": "0.1.0",
+  "description": "Scala language server with rich IDE features",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/scalameta/metals",
+  "license": "Apache-2.0",
+  "keywords": ["scala", "lsp", "language-server", "metals"]
+}

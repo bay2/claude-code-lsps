@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, Dart, and Solidity.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, Dart, and Solidity.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -181,6 +181,34 @@ brew install JetBrains/utils/kotlin-lsp
 For manual installation, download from [releases](https://github.com/Kotlin/kotlin-lsp/releases) and add to PATH.
 
 > **Note:** Currently supports JVM-only Kotlin Gradle projects.
+
+</details>
+
+<details>
+<summary>Scala (<code>metals</code>)</summary>
+
+Requires **Java 11 or 17**. Install **Metals** using [Coursier](https://get-coursier.io/):
+```bash
+# Install Coursier (if not already installed)
+# macOS with Homebrew:
+brew install coursier/formulas/coursier
+
+# Then bootstrap Metals:
+coursier bootstrap org.scalameta:metals_2.13:1.6.5 -o metals -f
+# Move the generated `metals` binary to a directory on your PATH
+
+# Or with recommended JVM options:
+coursier bootstrap \
+  --java-opt -XX:+UseG1GC \
+  --java-opt -XX:+UseStringDeduplication \
+  --java-opt -Xss4m \
+  --java-opt -Xms100m \
+  org.scalameta:metals_2.13:1.6.5 -o metals -f
+```
+
+Ensure `metals` is on your PATH and `JAVA_HOME` points to a Java 11 or 17 installation.
+
+> **Supported build tools:** sbt, Gradle, Maven, Mill (via Bloop/BSP).
 
 </details>
 

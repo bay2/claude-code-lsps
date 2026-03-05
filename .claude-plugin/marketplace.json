@@ -771,6 +771,43 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "metals",
+      "version": "0.1.0",
+      "source": "./metals",
+      "description": "Scala language server with rich IDE features",
+      "category": "development",
+      "tags": [
+        "scala",
+        "lsp",
+        "language-server",
+        "metals"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "scala": {
+          "command": "metals",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".sbt": "sbt",
+            ".sc": "scala",
+            ".scala": "scala"
+          },
+          "initializationOptions": {
+            "isExitOnShutdown": true,
+            "statusBarProvider": "log-message"
+          },
+          "settings": {},
+          "startupTimeout": 90000,
+          "shutdownTimeout": 15000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
