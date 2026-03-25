@@ -986,6 +986,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "objc-lsp",
+      "version": "0.1.0",
+      "source": "./objc-lsp",
+      "description": "Objective-C language server for Claude Code, providing code intelligence for Objective-C projects",
+      "category": "development",
+      "tags": [
+        "objective-c",
+        "objc",
+        "ios",
+        "macos",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "liuyanghejerry"
+      },
+      "lspServers": {
+        "objc-lsp": {
+          "command": "/Users/sim/.local/bin/objc-lsp-wrapper",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".m": "objective-c",
+            ".h": "objective-c",
+            ".mm": "objective-cpp"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
