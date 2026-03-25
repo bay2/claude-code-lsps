@@ -1,0 +1,16 @@
+{
+    "objc-lsp": {
+        "command": "/Users/sim/.local/bin/objc-lsp-wrapper",
+        "args": [],
+        "extensionToLanguage": {
+            ".m": "objective-c",
+            ".h": "objective-c",
+            ".mm": "objective-cpp"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "startupTimeout": 60000,
+        "maxRestarts": 3
+    }
+}

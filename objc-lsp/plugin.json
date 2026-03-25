@@ -1,0 +1,11 @@
+{
+  "name": "objc-lsp",
+  "version": "0.1.0",
+  "description": "Objective-C language server for Claude Code, providing code intelligence for Objective-C projects",
+  "author": {
+    "name": "liuyanghejerry"
+  },
+  "repository": "https://github.com/liuyanghejerry/Objective-C-LSP",
+  "license": "MIT",
+  "keywords": ["objective-c", "objc", "ios", "macos", "lsp", "language-server"]
+}
